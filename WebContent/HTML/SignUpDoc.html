@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MedExten</title>
+<link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+
+function isNotEmpty (field, msg) {
+	if(field.val() == "") {
+		alert(msg);
+		return false;
+	}
+	return true;
+}
+
+$(document).ready(function() {
+	$("#signUp_bt").click(function() {
+		if(isNotEmpty($("#logID"), "Please enter the login name.")) {
+			return true;
+		}
+		if(isNotEmpty($("#speciality"), "Please enter the login name.")) {
+			return true;
+		}
+		if(isNotEmpty($("#logID"), "Please enter the login name.")) {
+			return true;
+		}
+		if(isNotEmpty($("#logID"), "Please enter the login name.")) {
+			return true;
+		}
+		if(isNotEmpty($("#gender"), "Please select the gender.")) {
+			return true;
+		}
+		return false;
+	})
+});
+
+</script>
+</head>
+<body bgcolor="gray">
+<div align="center">
+	<h3 align="center">Fill Details</h3>
+	
+	<form action="">
+		<table>
+			<tr align="center">
+				<td><input id="logID" type="text" title="Enter Name" placeholder="Enter Name" ></td>
+			</tr>
+			<tr align="center"> 
+				<td>Gender: <input id="gender" type="radio" name="gender" >Male
+				<input type="radio" name="gender" >Female</td>
+			</tr >
+			<tr align="center">
+				<td><input type="text" title="Date Of Birth" placeholder="Date Of Birth" ></td>
+			</tr>
+			<tr align="center">
+				<td><input type="text" title="Age" placeholder="Age" ></td>
+			</tr>
+			<tr align="center">
+				<!-- <td><input title="Speciality" placeholder="Speciality"></td> -->
+				<td>
+					<select id="speciality">
+						<option value="">Select Speciality</option>
+						<option value="Physiology">Physiology</option>
+						<option value="Cardiology">Cardiology</option>
+						<option value="Dermatology">Dermatology</option>
+						<option value="Gynecology">Gynecology</option>
+						<option value="Neurology">Neurology</option>
+					</select>
+				</td>
+			</tr>
+			<tr align="center">
+				<td><input type="text" title="Fees" placeholder="Fees" ></td>
+			</tr>
+			<tr align="center">
+				<td><input type="text" title="Availability Days" placeholder="Availability Days" ></td>
+			</tr>
+			<tr align="center">
+				<td><input type="text" title="Consultation Fee" placeholder="Consultation Fee" ></td>
+			</tr>
+			<tr align="center">
+				<td><input type="text" title="Consultation Time" placeholder="Consultation Time" ></td>
+			</tr>
+			<tr align="center">
+				<td><input type="text" title="Experience" placeholder="Experience"></td>
+			</tr>
+			<tr align="center">
+				<td><input type="text" title="Hospital/Clinic Name" placeholder="Hospital/Clinic Name"></td>
+			</tr>
+			<tr align="center">
+				<td><input type="text" title="Area" placeholder="Area" ></td>
+			</tr>
+			<tr align="center">
+				<td><input type="text" title="City" placeholder="City" ></td>
+			</tr>
+			<tr align="center">
+				<td><input type="text" title="State" placeholder="State" ></td>
+			</tr>
+			<tr align="center">
+				<td><input type="text" title="Pincode" placeholder="Pincode" ></td>
+			</tr>
+			<tr align="center">
+				<td><input type="text" title="Mobie Number" placeholder="Mobie Number" ></td>
+			</tr>
+			<tr align="center">
+				<td><input type="text" title="Professional Statement" placeholder="Professional Statement" ></td>
+			</tr>
+			<tr align="center">
+				<td align="center"><input id="signUp_bt" type="submit" value="Sign-Up" title="Please click to create your account."> </td>	
+			</tr>
+			<tr align="center">
+				<td align="center"><a href="./jsps/SignIn_Doc">Already have a account</a></td>
+			</tr>
+		</table>
+	</form>
+	</div>
+</body>
+</html>

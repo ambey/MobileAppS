@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+"http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="ServiceProvider" type="com.extenprise.mapp.service.form.ServiceProvider" />
+		<form-bean name="Patient" type="com.extenprise.mapp.customer.form.Patient" />
+
+	</form-beans>
+
+	<action-mappings>
+		<action path="/home" forward="/jsps/index.jsp" />
+				
+		<!-- <action path="/signInDoc" type="com.extenprise.mapp.service.action.SignInDoc" name="ServiceProvider"
+			 scope="request" input="/jsps/signIn_Doc.jsp">
+			 <forward name="success" path="/jsps/welcome.jsp"></forward>
+			 <forward name="failure" path="/jsps/index.jsp"></forward>
+		</action> -->
+		
+		 <action path="/signInDoc" type="com.extenprise.mapp.service.action.SignInDoc" name="ServiceProvider"
+			 scope="request">
+		</action> 
+		
+		<!-- <action path="/signUpDoc" type="com.extenprise.mapp.service.action.SignUpDoc" name="ServiceProvider"
+			 scope="request" input="/jsps/signUpDoc.jsp">
+			 <forward name="success" path="/jsps/welcome.jsp"></forward>
+			 <forward name="failure" path="/jsps/index.jsp"></forward>
+		</action> -->
+		
+		<action path="/signUpDoc" type="com.extenprise.mapp.service.action.SignUpDoc" name="ServiceProvider"
+			 scope="request">
+		</action> 
+		
+		<action path="/signInPatient" type="com.extenprise.mapp.customer.action.SignInPatient" name="Patient"
+			 scope="request">
+		</action> 
+		
+		<action path="/signUpPatient" type="com.extenprise.mapp.customer.action.SignUpPatient" name="Patient"
+			 scope="request">
+		</action>
+
+		</action-mappings>
+
+	<message-resources parameter="com.extenprise.mapp.common.ApplicationResources"
+		null="false" />
+</struts-config>

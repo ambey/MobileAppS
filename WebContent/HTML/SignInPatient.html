@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MedExten</title>
+<link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+	$("#login_bt").click(function() {
+		var id = $("#logID").val();
+		var pwd = $("#pwd").val();
+		if(id == "") {
+			alert("Please enter the login name.");
+			return false;
+		}
+		if(pwd == "") {
+			alert("Please enter the password.");
+			return false;
+		}
+	})
+});
+</script>
+</head>
+<body bgcolor="gray">
+<div align="center" style="margin-top: 200px;">
+	<h3 align="center">Patient's Login</h3>
+	
+	<form action="">
+		<table>
+			<tr align="center">
+				<td><input id="logID" title="Enter Name" placeholder="Enter Name" ></td>
+			</tr>
+			<tr align="center">
+				<td><input id="pwd" title="Enter Password" placeholder="Enter Password"></td>
+			</tr>
+			<tr align="center">
+				<td align="center"><input id="login_bt" type="submit" value="Sign-in" title="Please click to Sign in to your account."> </td>	
+			</tr>
+			<tr align="center">
+				<td align="center"><a href="#">Forgot Password</a></td>
+			</tr>
+			<tr align="center">
+				<td align="center" ><a href="#">Sign-Up</a></td>
+			</tr>
+		</table>
+	</form>
+	</div>
+</body>
+</html>
